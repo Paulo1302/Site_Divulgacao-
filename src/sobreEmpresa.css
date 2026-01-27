@@ -1,62 +1,61 @@
 /* src/sobreEmpresa.css */
 
-/* Remove o fundo branco e sombras da seção para integrar com o fundo do site */
-#sobre.aba-conteudo {
-    background-color: transparent; 
-    box-shadow: none;
-}
-
-.conteudo-descritivo {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px 0;
-    line-height: 1.8;
-}
-
-/* Título com a borda dourada padrão do site */
-.conteudo-descritivo h2, 
-.conteudo-descritivo h3 {
-    color: var(--primaria);
-    margin-top: 40px;
-    margin-bottom: 20px;
-    padding-left: 15px;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    /* Aplicação da borda dourada idêntica ao restante do site */
-    border-left: 6px solid var(--detalhe); 
-}
-
-.conteudo-descritivo p {
-    font-size: 1.25rem;
-    color: var(--texto);
-    margin-bottom: 25px;
-    text-align: justify;
-}
-
-/* Destaque dourado para datas e nomes importantes no texto */
-.conteudo-descritivo strong {
-    color: var(--detalhe);
-    font-weight: 700;
-}
-
-/* Ajuste do Banner da aba Sobre */
+/* Banner com moldura dourada */
 #sobre .banner {
-    background: transparent; /* Remove a caixa branca do banner */
+    background: transparent;
     text-align: center;
-    padding: 40px 20px;
-    margin-bottom: 20px;
+    padding: 20px 30px;
+    margin: 0 auto 40px auto;
+    max-width: fit-content;
+    border: 3px solid var(--detalhe); /* Aumentei um pouco a espessura da borda */
+    border-radius: 4px;
 }
 
 #sobre .banner h1 {
-    font-size: 3rem;
+    font-size: 2.8rem; /* Aumentado de 2rem */
     color: var(--primaria);
     margin-bottom: 10px;
-    font-weight: 900;
+    font-weight: 800;
+    line-height: 1.2;
 }
 
 #sobre .banner p {
-    font-size: 1.4rem;
+    font-size: 1.4rem; /* Aumentado de 1rem */
     color: var(--texto);
+    margin: 0;
     font-style: italic;
+    font-weight: 500;
+}
+
+/* Área de texto descritivo */
+.conteudo-descritivo {
+    max-width: 950px; /* Aumentei a largura para acomodar letras maiores */
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Títulos das Seções (Padronizados com borda lateral) */
+.conteudo-descritivo h2, 
+.conteudo-descritivo h3 {
+    color: var(--primaria);
+    margin: 45px 0 20px 0; 
+    font-size: 2.2rem; /* Aumentado de 1.6rem */
+    font-weight: 700;
+    border-left: 8px solid var(--detalhe); /* Borda lateral mais visível */
+    padding-left: 20px;
+}
+
+/* Parágrafos com recuo e fonte maior */
+.conteudo-descritivo p {
+    font-size: 1.4rem; /* Aumentado de 1.15rem - Tamanho ideal para leitura clara */
+    color: var(--texto);
+    text-align: justify;
+    margin-bottom: 25px;
+    text-indent: 3em; /* Aumentei o recuo para acompanhar o tamanho da letra */
+}
+
+/* Destaque em negrito dentro do texto */
+.conteudo-descritivo strong {
+    color: var(--detalhe);
+    font-weight: 800;
 }
