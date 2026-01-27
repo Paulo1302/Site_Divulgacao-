@@ -1,4 +1,4 @@
-/* Grade de cards */
+/* Grid de cards */
 .grid-servicos {
   display: grid;
   gap: 1.5rem;
@@ -6,67 +6,95 @@
   margin-top: 1.5rem;
 }
 
-/* Card base */
+/* Card como link */
 .card-servico {
-  background-color: rgba(255, 255, 255, 0.9); /* levemente transparente */
+  position: relative;
+  overflow: hidden;
   border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  border: 2px solid transparent; /* base para a borda animada */
+}
+
+/* garantir que conteúdo e overlay fiquem acima da cobrinha */
+.card-conteudo,
+.card-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+/* Conteúdo visível do card */
+.card-conteudo {
+  background-color: rgba(255, 255, 255, 0.7); /* bem translúcido */
   padding: 1.5rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
+  min-height: 220px; /* garante altura semelhante */
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-/* Cabeçalho: todos os títulos com mesmo estilo/alinhamento */
+.card-servico:hover .card-conteudo {
+  background-color: rgba(255, 255, 255, 0.4); /* ainda mais transparente no hover */
+  transform: scale(1.01);
+}
+
+/* Estrutura interna */
 .card-header h3 {
   font-size: 1.1rem;
   text-align: center;
   margin-bottom: 0.75rem;
 }
 
-/* Corpo: altura fixa para alinhar o link no rodapé */
 .card-body {
-  flex: 1; /* empurra o footer pra baixo */
+  flex: 1;
 }
 
 .card-descricao {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   text-align: justify;
 }
 
-/* Rodapé: destaque + link sempre na mesma altura */
 .card-footer {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+  margin-top: 0.75rem;
 }
 
-/* Destaque (texto informativo, não link) */
+/* Texto final em dourado (destaque, não link) */
 .preco {
   font-weight: 600;
-  color: #555555; /* mais neutro, diferente da cor de link */
-  font-size: 0.9rem;
+  color: #d4af37;        /* dourado */
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
-/* Link de ação: visual claramente de link */
-.card-link {
-  font-size: 0.9rem;
-  color: #1b4c7a; /* cor principal */
-  text-decoration: underline;
-  font-weight: 500;
-  margin-left: auto; /* encosta à direita quando couber */
+/* Overlay de "Ver contatos" */
+.card-overlay {
+  position: absolute;
+  inset: 0; /* top, right, bottom, left: 0 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(10, 10, 10, 0.55); /* escurece levemente */
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
-.card-link:hover {
-  text-decoration: none;
-  color: #163d63;
+.card-servico:hover .card-overlay {
+  opacity: 1;
 }
 
-/* 5º card com leve variação (para se destacar, mas manter harmonia) */
-.grid-servicos .card-servico:nth-child(5) {
-  background-color: rgba(255, 255, 255, 0.85);
-  border: 1px dashed rgba(27, 76, 122, 0.3);
+/* Texto dourado no centro */
+.card-overlay-text {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #d4af37; /* dourado clássico */
+  border: 1px solid rgba(212, 175, 55, 0.7);
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  background-color: rgba(0, 0, 0, 0.35);
 }

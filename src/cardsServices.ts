@@ -18,7 +18,7 @@ const servicos: Servico[] = [
     titulo: 'Cremação',
     descricao:
       'Orientação completa à família e encaminhamento para cremação, conforme condições previamente combinadas.',
-    destaque: 'Consulte condições',
+    destaque: 'Consultar condições',
   },
   {
     titulo: 'Translado Funerário',
@@ -26,10 +26,10 @@ const servicos: Servico[] = [
       'Translado sério e seguro, com respeito em todo o percurso. Ideal para remoção entre cidades ou estados.',
     destaque: 'Consultar condições',
   },
-    {
+  {
     titulo: 'Suporte à Família',
     descricao:
-      'Suporte completo à família nos momentos mais difíceis, com atendimento humano e acolhedor, organizando todos os detalhes do funeral.',
+      'Suporte completo à família nos momentos mais difíceis, com atendimento humano e acolhedor.',
     destaque: 'Acolhimento dedicado',
   },
   {
@@ -47,18 +47,23 @@ export function renderizarCardsServicos(containerSelector: string) {
   container.innerHTML = servicos
     .map(
       (s) => `
-      <div class="card card-servico">
-        <div class="card-header">
-          <h3>${s.titulo}</h3>
+      <a class="card-servico" href="#contato">
+        <div class="card-conteudo">
+          <div class="card-header">
+            <h3>${s.titulo}</h3>
+          </div>
+          <div class="card-body">
+            <p class="card-descricao">${s.descricao}</p>
+          </div>
+          <div class="card-footer">
+            ${s.destaque ? `<span class="preco">${s.destaque}</span>` : ''}
+          </div>
         </div>
-        <div class="card-body">
-          <p class="card-descricao">${s.descricao}</p>
+
+        <div class="card-overlay">
+          <span class="card-overlay-text">Ver contatos</span>
         </div>
-        <div class="card-footer">
-          ${s.destaque ? `<span class="preco">${s.destaque}</span>` : ''}
-          <a class="card-link" href="#contato">Ver contatos</a>
-        </div>
-      </div>
+      </a>
     `,
     )
     .join('');
