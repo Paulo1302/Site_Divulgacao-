@@ -1,0 +1,62 @@
+/* src/sobreEmpresa.css */
+
+/* Remove o fundo branco e sombras da seção para integrar com o fundo do site */
+#sobre.aba-conteudo {
+    background-color: transparent; 
+    box-shadow: none;
+}
+
+.conteudo-descritivo {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+    line-height: 1.8;
+}
+
+/* Título com a borda dourada padrão do site */
+.conteudo-descritivo h2, 
+.conteudo-descritivo h3 {
+    color: var(--primaria);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* Aplicação da borda dourada idêntica ao restante do site */
+    border-left: 6px solid var(--detalhe); 
+}
+
+.conteudo-descritivo p {
+    font-size: 1.25rem;
+    color: var(--texto);
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+/* Destaque dourado para datas e nomes importantes no texto */
+.conteudo-descritivo strong {
+    color: var(--detalhe);
+    font-weight: 700;
+}
+
+/* Ajuste do Banner da aba Sobre */
+#sobre .banner {
+    background: transparent; /* Remove a caixa branca do banner */
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+}
+
+#sobre .banner h1 {
+    font-size: 3rem;
+    color: var(--primaria);
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+#sobre .banner p {
+    font-size: 1.4rem;
+    color: var(--texto);
+    font-style: italic;
+}
