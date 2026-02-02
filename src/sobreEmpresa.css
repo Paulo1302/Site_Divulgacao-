@@ -1,61 +1,57 @@
 /* src/sobreEmpresa.css */
 
-/* Banner com moldura dourada */
+/* Banner Original */
 #sobre .banner {
-    background: transparent;
     text-align: center;
     padding: 20px 30px;
     margin: 0 auto 40px auto;
     max-width: fit-content;
-    border: 3px solid var(--detalhe); /* Aumentei um pouco a espessura da borda */
+    border: 3px solid var(--detalhe);
     border-radius: 4px;
 }
 
-#sobre .banner h1 {
-    font-size: 2.8rem; /* Aumentado de 2rem */
-    color: var(--primaria);
-    margin-bottom: 10px;
-    font-weight: 800;
-    line-height: 1.2;
-}
-
-#sobre .banner p {
-    font-size: 1.4rem; /* Aumentado de 1rem */
-    color: var(--texto);
-    margin: 0;
-    font-style: italic;
-    font-weight: 500;
-}
-
-/* Área de texto descritivo */
+/* Área de texto */
 .conteudo-descritivo {
-    max-width: 950px; /* Aumentei a largura para acomodar letras maiores */
+    max-width: 950px; 
     margin: 0 auto;
     line-height: 1.8;
 }
 
-/* Títulos das Seções (Padronizados com borda lateral) */
-.conteudo-descritivo h2, 
-.conteudo-descritivo h3 {
+/* Títulos: Formatação padronizada (Cor, Fonte, Borda Lateral) */
+.conteudo-descritivo h2 {
     color: var(--primaria);
     margin: 45px 0 20px 0; 
-    font-size: 2.2rem; /* Aumentado de 1.6rem */
+    font-size: 2.2rem;
     font-weight: 700;
-    border-left: 8px solid var(--detalhe); /* Borda lateral mais visível */
+    border-left: 8px solid var(--detalhe);
     padding-left: 20px;
 }
 
-/* Parágrafos com recuo e fonte maior */
+/* Parágrafos: Formatação padronizada */
 .conteudo-descritivo p {
-    font-size: 1.4rem; /* Aumentado de 1.15rem - Tamanho ideal para leitura clara */
+    font-size: 1.4rem;
     color: var(--texto);
     text-align: justify;
-    margin-bottom: 25px;
-    text-indent: 3em; /* Aumentei o recuo para acompanhar o tamanho da letra */
+    margin-bottom: 25px; /* Espaço entre o texto e a imagem abaixo dele */
+    text-indent: 3em;
 }
 
-/* Destaque em negrito dentro do texto */
-.conteudo-descritivo strong {
-    color: var(--detalhe);
-    font-weight: 800;
+/* Blocos de conteúdo */
+.bloco-anuncio {
+    width: 100%;
+    margin-top: 40px; /* Espaço extra antes de começar um novo título */
+}
+
+/* Imagens */
+.img-sobre-projeto {
+    width: 100%;
+    max-width: 950px; 
+    height: auto;
+    border: 3px solid var(--detalhe);
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
+    display: block; /* Garante que a imagem ocupe a linha toda */
+    margin-top: 10px; /* Pequeno ajuste extra para desgrudar do parágrafo */
+    margin-bottom: 50px; /* Espaço no final do bloco antes do próximo título */
 }

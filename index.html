@@ -7,7 +7,12 @@
 </head>
 <body>
   <header>
+    <div class="logo-header-wrapper">
+        <img src="/src/img/sobre/logo.png" alt="Logo 21 de Abril">
+    </div>
+
     <div class="logo">Funerária 21 de Abril</div>
+    
     <nav class="menu-abas">
       <button class="tab-link active" data-alvo="sobre">Sobre Nós</button>
       <button class="tab-link" data-alvo="servicos">Serviços</button>
@@ -16,18 +21,14 @@
   </header>
 
   <main id="conteudo-principal">
-    <section id="sobre" class="aba-conteudo active">
-      <!-- conteúdo será injetado via TypeScript -->
-    </section>
+    <section id="sobre" class="aba-conteudo active"></section>
 
     <section id="servicos" class="aba-conteudo">
       <h2 class="titulo-secao">Nossos Serviços</h2>
       <div class="grid-servicos"></div>
     </section>
 
-    <section id="contato" class="aba-conteudo">
-      <!-- conteúdo será injetado via TypeScript -->
-    </section>
+    <section id="contato" class="aba-conteudo"></section>
   </main>
 
   <script type="module" src="/src/main.ts"></script>

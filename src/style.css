@@ -1,3 +1,5 @@
+/* src/style.css - */
+
 :root {
     --primaria: #1a1a1a;
     --detalhe: #d4af37;
@@ -12,6 +14,8 @@ body {
     background-color: var(--fundo);
 }
 
+/* --- HEADER E NAVEGAÇÃO --- */
+
 header {
     background-color: var(--primaria);
     padding: 1.5rem;
@@ -19,6 +23,40 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Adicionei uma altura mínima para garantir que cabe a logo grande */
+    min-height: 160px; 
+}
+
+/* Wrapper da Logo */
+.logo-header-wrapper {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    /* --- TAMANHO AUMENTADO (Desktop) --- */
+    width: 300px;       
+    height: 300px;      
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* --- SOMBRA REMOVIDA --- */
+    /* A sombra estava criando a "barra preta fora de tom" no fundo escuro */
+    /* box-shadow: 0 4px 10px rgba(0,0,0,0.3); */
+    
+    z-index: 101; 
+}
+
+.logo-header-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .logo {
@@ -27,12 +65,16 @@ header {
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    /* Margem extra para garantir que o texto não cole na logo se a tela for estreita */
+    margin-left: 160px; 
 }
 
 .menu-abas {
     display: flex;
     justify-content: center;
     gap: 20px;
+    /* Margem extra também para o menu */
+    margin-left: 160px;
 }
 
 .tab-link {
@@ -51,7 +93,8 @@ header {
     font-weight: bold;
 }
 
-/* Lógica de Abas */
+/* --- LÓGICA DE ABAS E SEÇÕES --- */
+/* (O restante do CSS permanece igual ao anterior) */
 .aba-conteudo {
     display: none;
     max-width: 1200px;
@@ -59,11 +102,7 @@ header {
     padding: 0 20px;
     animation: fadeIn 0.4s ease-in;
 }
-
-.aba-conteudo.active {
-    display: block;
-}
-
+.aba-conteudo.active { display: block; }
 .titulo-secao {
     font-size: 2.5rem;
     color: var(--primaria);
@@ -71,15 +110,18 @@ header {
     border-bottom: 5px solid var(--detalhe);
     display: inline-block;
 }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-/* Grid de Contato */
+/* --- ESTILOS DE CONTATO --- */
 .contato-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: stretch;
 }
-
 .contato-info {
     background: #fff;
     padding: 60px;
@@ -89,12 +131,7 @@ header {
     flex-direction: column;
     justify-content: center;
 }
-
-.info-bloco {
-    margin-bottom: 40px;
-}
-
-/* Títulos Maiores (Labels) */
+.info-bloco { margin-bottom: 40px; }
 .info-bloco strong {
     display: block;
     color: var(--detalhe);
@@ -103,32 +140,40 @@ header {
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-
-/* Conteúdo (Dados) */
 .info-bloco p, .info-bloco a {
     margin: 0;
     font-size: 1.6rem;
     color: var(--primaria);
     text-decoration: none;
 }
+.link-whatsapp { color: var(--wpp-verde) !important; font-weight: 600; }
+.mapa-container { height: 100%; min-height: 500px; border: 1px solid #ddd; }
 
-/* Cor do WhatsApp */
-.link-whatsapp {
-    color: var(--wpp-verde) !important;
-    font-weight: 600;
-}
-
-.mapa-container {
-    height: 100%;
-    min-height: 500px;
-    border: 1px solid #ddd;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+/* --- RESPONSIVIDADE (MOBILE) --- */
 
 @media (max-width: 900px) {
     .contato-grid { grid-template-columns: 1fr; }
+
+    /* Ajustes do Header no Celular */
+    header {
+        /* Aumentado para compensar a logo maior */
+        padding-top: 11rem; 
+    }
+    
+    .logo {
+        margin-left: 0; /* Remove a margem lateral no celular */
+    }
+    .menu-abas {
+        margin-left: 0; /* Remove a margem lateral no celular */
+    }
+
+    .logo-header-wrapper {
+        top: 15px;       
+        left: 50%;       
+        transform: translateX(-50%);
+        
+        /* --- TAMANHO AUMENTADO (Mobile) --- */
+        width: 120px;
+        height: 120px;
+    }
 }
