@@ -1,7 +1,7 @@
 // src/sobreEmpresa.ts
-import fachadaImg from "./img/sobre/Fachada.jpg";
-import veiculosImg from "./img/sobre/veiculos.jpeg";
-import interiorImg from "./img/sobre/interior.jpeg";
+import fachadaImg from "./img/sobre/fachada.jpg";
+import veiculosImg from "./img/sobre/veiculos.jpg";
+import interiorImg from "./img/sobre/interior.jpg";
 
 export const dadosEmpresa = {
     titulo: "Dignidade e Respeito desde 1940",
