@@ -14,6 +14,8 @@ body {
 
 /* --- HEADER E NAVEGAÇÃO --- */
 
+/* --- HEADER E NAVEGAÇÃO --- */
+
 header {
   background-color: var(--primaria);
   padding: 0.75rem 1rem;
@@ -21,56 +23,52 @@ header {
   top: 0;
   z-index: 100;
   display: flex;
-  align-items: center;
-  justify-content: space-between;   /* logo à esquerda, texto + abas à direita */
+  align-items: center;       /* alinha logo + texto na mesma altura */
+  justify-content: center;   /* centro para o bloco do nome + abas */
   box-sizing: border-box;
 }
 
-/* Wrapper da Logo */
+/* Logo fixa no canto esquerdo, alinhada à barra */
 .logo-header-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-  height: 120px;
-  flex-shrink: 0;
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .logo-header-wrapper img {
-  width: 100%;
-  height: 100%;
+  height: 40px;              /* altura da logo (ajuste fino aqui) */
+  width: auto;
   object-fit: contain;
 }
 
-/* Texto da logo (nome) */
+/* Container que agrupa nome + abas: CENTRALIZADO */
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* centraliza nome e abas */
+}
+
+/* Nome da funerária centralizado */
 .logo {
   color: var(--detalhe);
   font-size: 1.5rem;
   font-weight: 800;
   text-transform: uppercase;
-  margin: 0 0 0 0.75rem;
-  white-space: nowrap;
+  margin: 0 0 0.4rem 0;
+  text-align: center;
 }
 
-/* Container que agrupa nome + abas, para ocupar o resto da barra */
-.header-right {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: flex-end;
-}
-
-/* Barra de abas */
+/* Barra de abas logo embaixo, também centralizada */
 .menu-abas {
   display: flex;
-  width: 100%;
+  justify-content: center;    /* centraliza os 3 botões */
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
 
-/* Botões de aba: preenchem a barra */
 .tab-link {
-  flex: 1;                 /* divide igualmente a largura */
+  flex: 1;
   background: none;
   border: none;
   color: #888;
@@ -80,6 +78,18 @@ header {
   transition: 0.3s;
   text-align: center;
   white-space: nowrap;
+}
+
+/* Forçar a logo a ficar menor, sem quebrar o restante do layout (reforço) */
+header .logo-header-wrapper {
+  width: auto;
+  height: 40px;
+}
+
+header .logo-header-wrapper img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
 }
 
 .tab-link.active {
@@ -168,11 +178,24 @@ header {
     justify-content: center;
   }
 
-  .logo-header-wrapper {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 0.5rem;
-  }
+  
+
+  /* Wrapper da Logo */
+.logo-header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 120px;   /* antes era 160px/120px: deixa menor */
+  width: 20vw;        /* reduz a proporção na tela */
+  min-width: 70px;    /* tamanho mínimo aceitável */
+  flex-shrink: 0;
+}
+
+.logo-header-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 
   .logo {
     margin: 0;
@@ -221,4 +244,16 @@ header {
   .mapa-container {
     min-height: 220px;
   }
+}
+
+/* Forçar a logo a ficar menor, sem quebrar o restante do layout */
+header .logo-header-wrapper {
+  width: 90px;       /* tamanho alvo da logo */
+  height: 90px;
+}
+
+header .logo-header-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
