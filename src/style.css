@@ -38,8 +38,8 @@ header {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  max-width: 80px;
-  width: 80px;
+  max-width: 400px;
+  width: 400px;
 }
 
 .logo-header-wrapper img {
@@ -237,8 +237,8 @@ header {
   }
 
   .logo-header-wrapper {
-    max-width: 90px;
-    width: 90px;
+    max-width: 400px;
+    width: 400px;
   }
 
   .header-right {
@@ -308,8 +308,8 @@ header {
     left: 3rem;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 120px;
-    width: 120px;
+    max-width: 1200px;
+    width: 300px;
   }
 
   /* Conteúdo central (nome + abas) centralizado no header inteiro */
@@ -379,8 +379,8 @@ header {
 
   .logo-header-wrapper {
     left: 4rem;
-    max-width: 140px;
-    width: 140px;
+    max-width: 300px;
+    width: 300px;
   }
 
   .logo {
