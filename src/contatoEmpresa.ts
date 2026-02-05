@@ -15,7 +15,7 @@ export function renderizarContato(selector: string) {
           <h3>Endereço</h3>
           <p>
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Rua+Aurino+Correa+Lima,+37,+Centro,+Gl%C3%B3ria+do+Goit%C3%A1+-+PE"
+              href="https://maps.app.goo.gl/Fro58bHS5tDNukVf8"
               target="_blank"
               rel="noopener noreferrer"
               class="link-endereco"
