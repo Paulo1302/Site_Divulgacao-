@@ -1,5 +1,5 @@
-import gmailIcon from "./img/gmail.jpg";
-import whatsappIcon from "./img/whatsapp.jpg";
+import gmailIcon from "./img/contatos/gmail.jpg";
+import whatsappIcon from "./img/contatos/whatsapp.jpg";
 
 export function renderizarContato(selector: string) {
   const secao = document.querySelector<HTMLElement>(selector);
