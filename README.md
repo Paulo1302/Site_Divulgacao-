@@ -1,4 +1,4 @@
-# SIte_Funeraria# Site Funerária 21 de Abril
+# Site_Funeraria# Site Funerária 21 de Abril
 
 Site institucional da Funerária 21 de Abril - Santuário Paz, desenvolvido com Vite, TypeScript e CSS vanilla.
 
@@ -18,5 +18,5 @@ Site institucional da Funerária 21 de Abril - Santuário Paz, desenvolvido com 
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/Paulo1302/Site_Divulgacao-.git
-cd Site_Divulgacao-
+git clone https://github.com/Paulo1302/Funerarai_21_De_Abril.git
+cd Funeraria_21_De_Abril
