@@ -4,7 +4,7 @@ Site institucional da **Funerária 21 de Abril - Santuário Paz**, com informaç
 
 ## 🌐 Acesse o site
 
-👉 https://paulo1302.github.io/Funeraria_21_De_Abril/ [web:366][web:372]
+👉 https://funeraria-21-de-abril.vercel.app/ [web:366][web:372]
 
 ## 🚀 Tecnologias utilizadas
 
